@@ -13,8 +13,8 @@
 </head>
 <body>
   <div class="box">
-    <h1>âœ… AutorizaÃ§Ã£o concluÃ­da!</h1>
-    <p>Copie os valores abaixo e cole no Claude para finalizar a configuraÃ§Ã£o.</p>
+    <h1>Autorizacao concluida!</h1>
+    <p>Copie os valores abaixo e cole no Claude para finalizar a configuracao.</p>
     <div id="params"></div>
   </div>
   <script>
@@ -22,13 +22,10 @@
     const container = document.getElementById('params');
     if (params.toString()) {
       params.forEach((value, key) => {
-        container.innerHTML += `
-          <div class="label">${key}</div>
-          <div class="code">${value}</div>
-        `;
+        container.innerHTML += '<div class="label">' + key + '</div><div class="code">' + value + '</div>';
       });
     } else {
-      container.innerHTML = '<p style="color:#888">Nenhum parÃ¢metro encontrado na URL.</p>';
+      container.innerHTML = '<p style="color:#888">Nenhum parametro encontrado na URL.</p>';
     }
   </script>
 </body>
